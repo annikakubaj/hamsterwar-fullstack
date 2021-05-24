@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom'
+import Gallery from './components/gallery/Gallery'
+import Battle from './components/battle/Battle'
+import Statistics from './components/statistics/Statistics'
+import History from './components/history/History'
+import Start from './components/start/Start'
 import './App.css';
 
 function App() {
@@ -13,22 +18,25 @@ function App() {
           <Link to="/battle"> Battle </Link>
           <Link to="/statistik"> Statistik </Link>
           <Link to="/historik"> Historik </Link>
-          nav 
+         
         </nav>
       
       </header>
       <main>
-        före switch 
+        
         <Switch>
-          <Route path="/galleri"> Galleri </Route>
-          <Route path="/battle"> Battle </Route>
-          <Route path="/statistik"> Statistik </Route>
-          <Route path="/historik"> Historik </Route>
-          <Route path="/"> Välkommen </Route>
+          <Route path="/galleri"> <Gallery /> </Route>
+          <Route path="/battle"> <Battle /> </Route>
+          <Route path="/battel">
+            <Redirect to="/battle" />
+          </Route>
+          <Route path="/statistik"> <Statistics /> </Route>
+          <Route path="/historik"> <History /> </Route>
+          <Route path="/"> <Start /> </Route>
 
         </Switch>
-        efter switch 
-        main 
+        
+        
       </main>
     </div>
     </Router>
