@@ -30,6 +30,13 @@ app.get('/', (req, res) => {
     res.send('Hamsterwars - Fullstack Project')
 })
 
+// test api
+const hamsters = ['hamsters', 'loves', 'food']
+
+app.get('/hamsters', (req, res) => {
+    res.send(hamsters)
+})
+
 //Viktigt att denna ligger sist, fångar alla övriga request 
 // först sker alltid backend routing och sedan frontend 
 // för att frontend routing ska fungera
@@ -39,7 +46,7 @@ app.get('*', (req, res) => {
  
 // REST API för hamsters & matches
 // app.use('/hamsters', hamsters)
-// app.use('/matches', matches)
+// app.use('/matches', matches)  
 // app.use('/matchwinners', matchwinners)
 // app.use('/winners', winners)
 // app.use('/losers', losers)

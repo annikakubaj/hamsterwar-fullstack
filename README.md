@@ -2,7 +2,7 @@
 node backend\server.js
 
 # Start project frontend 
-npm run start
+npm run start-frontend-dev
 
 
 
