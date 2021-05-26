@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 app.use( express.json() )
 app.use( cors() )
 app.use( express.static(buildFolder) )
-app.use( '/img', express.static(imgFolder))
+app.use( '/img', express.static(imageFolder))
 
 //Routes. Hanterar resursen "web root" - request och response. 
 app.get('/', (req, res) => {

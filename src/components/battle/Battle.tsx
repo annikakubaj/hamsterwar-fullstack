@@ -1,26 +1,21 @@
+// import './Battle.css';
+// import GalleryCard from '../gallery/GalleryCard'
+// import HamsterInfo from '../gallery/HamsterInfo'
 
-const Battle = () => (
-	<div>
-		<h1> Let's battle!</h1>
+
+
+
+const Battle = () => {
+	return (
+		<div>
+		<h1>Hamsters </h1>
+		
+		
+	
 	</div>
+	
 )
+	}
 
 export default Battle
 
-
-// const Battle = () => {
-// 	const fetchAnimalHamster = async (name: string, loves: string): Promise<>
-// 	 => {
-// 		const response = await  fetch(API_URL, { method: 'GET' })  // Vi behöver använda POST, PUT, DELETE också
-
-
-// 	}
-
-// 	return (
-// 	<div>
-		
-// 	</div>
-// )
-// }
-
-// export default Battle
