@@ -1,7 +1,7 @@
 import React from 'react'
 import './Gallery.css';
 import GalleryCard from './GalleryCard'
-import HamsterInfo from './HamsterInfo'
+
 
 
 
@@ -13,7 +13,6 @@ const Gallery = () => {
 		
 		
 	<GalleryCard />
-	<HamsterInfo />
 	</div>
 	
 )

@@ -2,32 +2,36 @@ import React from 'react'
 import { useEffect } from 'react'
 import { useState } from 'react'
 import './Gallery.css';
+import HamsterInfo from './HamsterInfo'
+import { Hamster } from '../../types/Hamster'
 
 
 const GalleryCard = () => {
-	const [hamsters, setHamsters] = useState<null | any []>(null)
+	const [hamsters, setHamsters] = useState<null | Hamster []>(null)
 	useEffect(() => {
-		async function get() {
+		async function getHamsters() {
 		const response = await fetch('/hamsters', { method: 'GET'})
-		const data: string[] = await response.json()
+		const data: Hamster [] = await response.json()
 		console.log('hämtade från server' , data)
 		setHamsters(data)
 		// OBS! Bättre att hämta datan i App-komponenten, eftersom den alltid är Mounted
 		}
-		get()
+		getHamsters()
 	}, [])
 	return (
 
 	<div className= "hamster-container">
 		<h1> Välkommen till galleriet!</h1>
 		{hamsters 
-		? hamsters.map(hamster => (
-			<div className="hamster-card" key={ hamster.id  }>
-				<img src={`img/${hamster.imgName}`}
+		? hamsters.map(h => (
+			<div className="hamster-card" key={ h.id  }>
+				<img src={`img/${h.imgName}`}
 				alt="hamster" />
-			Bild på hamster <br/>
-			{hamster.name} <br/>
-			<button>Mer info!</button>
+			 <br/>
+			{h.name} <br/>
+			<HamsterInfo hamster = {h} />
+			
+			
 
 			
 		
