@@ -6,12 +6,14 @@ const History = () => {
 	const [age, setAge] = useState ('');
 	const [loves, setLoves] = useState ('');
 	const [favFood, setFavFood] = useState ('');
+
 	const [imageName, setImageName] = useState ('');
 	const [controlledText, setControlledText] = useState('')
 	const [controlledText2, setControlledText2] = useState('') 
 	const [controlledText3, setControlledText3] = useState('')
 	const [controlledText4, setControlledText4] = useState('')  
 	const [controlledText5, setControlledText5] = useState('') 
+
 	const [nameTouched, setNameTouched] = useState(false)
 	const [ageTouched, setAgeTouched] = useState(false)
 	const [loveTouched, setLoveTouched] = useState(false)
@@ -86,7 +88,30 @@ const History = () => {
 		imageClass = (imageNameIsValid ? 'valid' : 'error')
 	} 
 
-	let formIsInvalid = !nameIsValid
+	let formIsInvalid = !nameIsValid 
+
+	async function postHamster() {
+
+		const newHamster = {
+			'name': controlledText,
+			'age': Number(controlledText2),
+			'loves': controlledText3, 
+			'favFood' : controlledText4, 
+			'imgName': controlledText5,
+			'wins': 0,
+			'defeats': 0,
+			'games': 0
+		}
+
+		console.log("Upload hamster", newHamster)
+		const response = await fetch ('/hamsters', {
+			method: 'POST',
+			headers: { 'Content-Type': 'application/json' },
+			body: JSON.stringify(newHamster)
+		})
+		console.log (await response.text())
+		
+	}
 
 	
 
@@ -209,11 +234,20 @@ const History = () => {
 
 				
 			<div>
-				<button disabled={formIsInvalid}> Spara hamster! </button>
+				<button disabled={formIsInvalid} onClick={postHamster}> Spara hamster! </button>
 			</div>
 			
 	</div>
+
 )}
+
+<div className="form-card">
+	<h2>Villa du posta din hamster? </h2>
+	
+
+				
+</div>
 			
 
 export default History
+
