@@ -8,11 +8,20 @@ const History = () => {
 	const [controlledText2, setControlledText2] = useState('') 
 	const [nameTouched, setNameTouched] = useState(false)
 
-	let nameIsValid: boolean = (name !== '')
+	let nameIsValid: boolean = true
+	let nameErrorMessage: string = ''
+	if( name === '' ) {
+		nameIsValid = false
+		nameErrorMessage = 'Vänligen fyll i din hamsters namn'
+	}
+
 	let nameClass = ''
 	if ( nameTouched ) {
 		nameClass = (nameIsValid ? 'valid' : 'error')
-	}
+	} 
+
+	let formIsInvalid = !nameIsValid 
+	
 
 	return (
 	<div className="form">
@@ -21,6 +30,7 @@ const History = () => {
 			 
 				<label> Namn: 
 				<input
+				placeholder="Namn"
 				onBlur={() => setNameTouched(true)}
 				 onChange={event =>{
 					console.log('Controlled change', event.target.value);setName(event.target.value)
@@ -32,15 +42,16 @@ const History = () => {
 				className={nameClass}
 				/>
 				</label>
-				<div className= "message hidden">Error?</div>
+				{nameTouched ? <div className= "message hidden"> {nameErrorMessage} </div> : null}
+				
 				<br/> 
 				Namn: {controlledText}
 				</section>
 
 				<section> 
 			 
-				<label> Namn: 
-				<input className="valid" onChange={event =>{
+				<label> Ålder: 
+				<input type="number" className="valid" onChange={event =>{
 					console.log('Controlled change', event.target.value);setName2(event.target.value)
 					 //toUpperCase fö rsta bokstaven
 					setControlledText2(event.target.value)
@@ -52,9 +63,11 @@ const History = () => {
 				</label>
 				<div className= "message hidden">Error?</div>
 				<br/> 
-				Namn: {controlledText2}
+				Ålder: {controlledText2}
 				</section>
-			
+			<div>
+				<button disabled={formIsInvalid}> Spara hamster! </button>
+			</div>
 			
 	</div>
 )}
