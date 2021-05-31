@@ -1,0 +1,37 @@
+.battle {
+	display: flex;
+	justify-content: center;
+	border: 2px red solid;
+	padding: 5em;
+	
+}
+
+.battle div {
+	border:#fcffa4 5px solid;
+	background-color: #ffe4e1;
+	border-radius:  10px;
+	
+}
+
+.battle p {
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: darkslategrey;
+}
+
+.battle img {
+	width: 20em;
+	height: 15em;
+	border: pink 2px solid;
+	border-radius: 0.5em;
+}
+
+.randomhamsterleft {
+	padding: 1em;
+
+}
+
+.randomhamsterright {
+	padding: 1em;
+}
+
+

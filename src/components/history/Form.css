@@ -5,33 +5,48 @@
 
 
 .form { 
-	padding: 1em; 
+	display: grid;
+	padding: 3em; 
 	border: 2px solid red;
 	font-size: 1.2em;
 	text-align: left;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+
 	
+
+}
+.form-card {
+	border: green solid 2px;
 
 }
 
 .form > section {
 	 margin-top: 1em; 
-	 margin-bottom: 2em;
+	 margin-bottom: em;
+	
 
 
 }
 
 .form > section > * {
 	  display: block;
+	 
 
 
 }
+
 
 .form label {
 	font-weight: bold;
 	font-size: 0.9em;
 }
+
 section {
-	border: 2px solid red;
+	border: 2px solid purple;
+	margin-bottom: 0.2em;
+	height: 3em;
+	
 } 
 
 .form input {
@@ -41,7 +56,7 @@ section {
 	border-width: 3px;
 }
 
-.form .message {
+.form .message-hidden {
 	position: absolute;
 	color: var(--error-color);
 }

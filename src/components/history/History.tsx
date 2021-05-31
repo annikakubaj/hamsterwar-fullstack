@@ -88,7 +88,7 @@ const History = () => {
 		imageClass = (imageNameIsValid ? 'valid' : 'error')
 	} 
 
-	let formIsInvalid = !nameIsValid 
+	let formIsInvalid = !nameIsValid || !ageIsValid || !favFoodIsValid || !loveIsValid || !imageNameIsValid
 
 	async function postHamster() {
 
@@ -96,7 +96,7 @@ const History = () => {
 			'name': controlledText,
 			'age': Number(controlledText2),
 			'loves': controlledText3, 
-			'favFood' : controlledText4, 
+			'favFood': controlledText4, 
 			'imgName': controlledText5,
 			'wins': 0,
 			'defeats': 0,
@@ -117,15 +117,17 @@ const History = () => {
 
 	return (
 	<div className="form">
+		<div className="form-card">
 		<h1> Lägg till ny hamster exempel </h1>
 		<section> 
 			 
-				<label> Namn: 
+				<label>  
 				<input
 				placeholder="Namn"
 				onBlur={() => setNameTouched(true)}
 				 onChange={event =>{
-					console.log('Controlled change', event.target.value);setName(event.target.value)
+					console.log('Controlled change', event.target.value);
+					setName(event.target.value)
 					setControlledText(event.target.value)
 				}
 			
@@ -136,99 +138,80 @@ const History = () => {
 				</label>
 				{nameTouched ? <div className= "message hidden"> {nameErrorMessage} </div> : null}
 				
-				<br/> 
-				Namn: {controlledText}
-				</section>
-
-
-
-				<section> 
-			 
-				<label> Ålder: 
-				<input 
-				placeholder="Ålder"
-				onBlur={() => setAgeTouched(true)}
-				 type="text"
-				  className="valid" 
-				  onChange={event =>{
-					console.log('Controlled change', event.target.value);setAge(event.target.value)
+				
+		</section>
+		<section>
+             
+                <label> 
+                <input placeholder="Ålder"
+				 type="text" onBlur = {() => setAgeTouched(true)} onChange={event =>{
+                    console.log('Controlled change', event.target.value);
+					setAge(event.target.value)
 					setControlledText2(event.target.value)
-				}
-			
-			}
-				value={age}
-				/>
-				</label>
-				{ageTouched ? <div className= "message hidden"> {ageErrorMessage}</div> : null}
-				<br/> 
-				Ålder: {controlledText2}
-				</section>
+					
+                }}
+                value={age}
+				className={ageClass}
+                />
+                </label>
+				{ageTouched ? 	<div className='message-hidden'>{ageErrorMessage}</div> : null }
+</section>
 
-				<section> 
-			 
-				<label> Älskar: 
-				<input 
-				placeholder="Älskar"
-				onBlur={() => setLoveTouched(true)}
-				 type="text"
-				  className="valid" 
-				  onChange={event =>{
-					console.log('Controlled change', event.target.value);setLoves(event.target.value)
-					setControlledText3(event.target.value)
-				}
-			
-			}
-				value={loves}
-				/>
-				</label>
-				{loveTouched ? <div className= "message hidden"> {loveErrorMessage}</div> : null}
-				<br/> 
-				Älskar: {controlledText3}
-				</section>
 
-				<section> 
-			 
-				<label> Favoritmat: 
-				<input 
-				placeholder="Favoritmat"
-				onBlur={() => setFavFoodTouched(true)}
-				 type="text"
-				  className="valid" 
-				  onChange={event =>{
-					console.log('Controlled change', event.target.value);setFavFood(event.target.value)
-					setControlledText4(event.target.value)
-				}
-			
-			}
-				value={favFood}
-				/>
-				</label>
-				{favFood ? <div className= "message hidden"> {favFoodErrorMessage}</div> : null}
-				<br/> 
-				Favoritmat: {controlledText4}
-				</section>
 
-				<section> 
-			 
-				<label> Lägg till bild: 
-				<input 
-				placeholder="Bild"
-				onBlur={() => setImageNameTouched(true)}
-				 type="text"
-				  className="valid" 
-				  onChange={event =>{
-					console.log('Controlled change', event.target.value);setImageName(event.target.value)
-					setControlledText5(event.target.value)
-				}
+<section>
+             
+			 <label>
+			 <input placeholder="Älskar" 
+			 type="text" onBlur = {() => setLoveTouched (true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setLoves(event.target.value)
+				 setControlledText3 (event.target.value)
+				 
+			 }}
+			 value={loves}
+			 className={loveClass}
+			 />
+			 </label>
+			 {loveTouched ? 	<div className='message-hidden'>{loveErrorMessage}</div> : null }
+</section>
+
 			
-			}
-				value={imageName}
-				/>
-				</label>
-				{imageName ? <div className= "message hidden"> {imageNameErrorMessage}</div> : null}
-				<br/> 
-				Bild:<img src= {controlledText5} />
-				</section>
+
+<section>
+             
+			 <label> 
+			 <input placeholder="Favoritmat"
+			  type="text" onBlur = {() => setFavFoodTouched(true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setFavFood(event.target.value)
+				 setControlledText4(event.target.value)
+				 
+			 }}
+			 value={favFood}
+			 className={favFoodClass}
+			 />
+			 </label>
+			 {favFoodTouched ? 	<div className='message-hidden'>{favFoodErrorMessage}</div> : null }
+</section>
+
+
+<section>
+             
+			 <label>
+			 <input placeholder="Bild" 
+			 type="text" onBlur = {() => setImageNameTouched(true)} onChange={event =>{
+				 console.log('Controlled change', event.target.value);
+				 setImageName(event.target.value)
+				 setControlledText5(event.target.value)
+				 
+			 }}
+			 value={imageName}
+			 className={imageClass}
+			 />
+			 </label>
+			 {imageTouched ? 	<div className='message-hidden'>{imageNameErrorMessage}</div> : null }
+</section>
 
 				
 
@@ -236,17 +219,26 @@ const History = () => {
 			<div>
 				<button disabled={formIsInvalid} onClick={postHamster}> Spara hamster! </button>
 			</div>
+			</div>
+			
+
+
+			<div className="form-card">
+			<h2>Here's your little champion! </h2>
+			<p>Vad heter din hamster? {controlledText}</p>
+			<p>Hur gammal är den? {controlledText2}</p>
+			<p>Vad tycker den om att göra? {controlledText3}</p>
+			<p>Vad är hens favoritmat? {controlledText4}</p>	
+		    <img src= {controlledText5} />
+
+				
+</div>
 			
 	</div>
 
 )}
 
-<div className="form-card">
-	<h2>Villa du posta din hamster? </h2>
-	
 
-				
-</div>
 			
 
 export default History

@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.logo {
+  width: 40em;
+}
+
 
 
 .App-header {
@@ -41,6 +45,6 @@ nav a:hover {
 }
 
 main {
-  background-color: lightblue;
+  background-color: #fcffa4;
   flex: 1 1 auto;
 }

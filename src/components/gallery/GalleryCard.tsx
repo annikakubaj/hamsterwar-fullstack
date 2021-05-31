@@ -25,8 +25,7 @@ const GalleryCard = () => {
 		{hamsters 
 		? hamsters.map(h => (
 			<div className="hamster-card" key={ h.id  }>
-				<img src={`img/${h.imgName}`}
-				alt="hamster" />
+				{(h.imgName.startsWith('http')) ? <img src={h.imgName}alt="hamster" />: <img src={`img/${h.imgName}`}alt="hamster" />}
 			 <br/>
 			{h.name} <br/>
 			<HamsterInfo hamster = {h} />
