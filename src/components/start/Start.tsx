@@ -32,7 +32,7 @@ getHamsters()
 		<Link to="/Battle"><button className="battle-btn">Let's battle!</button> </Link>
 		 </div>
 
-	:<div> <h1> Något har gått snett. Försök igen. </h1> 
+	:<div> <h1> Kunde inte hämta hamstrar från databasen. </h1> 
 <button className="error-btn" onClick={() => window.location.reload()}> Försök igen </button> </div> } </div>
 
 	

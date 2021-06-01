@@ -1,7 +1,8 @@
 .hamster-card {
-	border: 1px solid black;
-	padding: 1em;
+	border: 3px solid purple;
+	/* padding: 1em; */
 	margin: 0.3em;
+	/* margin-bottom: -60px; */
 }
 
 .border {
@@ -12,9 +13,48 @@
 
 .hamster-container {
 	display: grid;
-	grid-template-columns:  repeat(4, 1fr)  /* 1fr 1fr 1fr 1fr */ 
+	grid-template-columns:  repeat(4, 1fr);  /* 1fr 1fr 1fr 1fr */
+	border: red solid 2px;
 }
 
-img  {
-	width: 20vh;
+
+.hamster-card img {
+	width: 20em;
+	height: 15em;
+	border-radius: 0.5em; 
+}
+
+.hamster-info{
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #4a4a4a;
+	font-size: 1.3em;
+	margin-top: -60px;
+}
+
+
+.delete-btn {
+	display: flex;
+	font-size: 0.9em;
+	border-radius: 0.5em;
+	padding: 0.5em 1.4em;
+	background-color: #ff5349;
+	transition: all 0.4s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 5em;
+	
+	
+
+
+}
+
+.show-btn {
+	font-size: 0.9em;
+	border-radius: 0.5em;
+	padding: 0.5em 1.4em;
+	background-color: #FDBCB4;
+	transition: all 0.4s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 5em;
+	margin-top: -3px;
+
 }

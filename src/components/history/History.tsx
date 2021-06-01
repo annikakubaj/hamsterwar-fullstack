@@ -229,7 +229,8 @@ const History = () => {
 			<p>Hur gammal är den? {controlledText2}</p>
 			<p>Vad tycker den om att göra? {controlledText3}</p>
 			<p>Vad är hens favoritmat? {controlledText4}</p>	
-		    <img src= {controlledText5} />
+		    {/* <p>Bild:<img src={controlledText5}/> </p> */}
+			<div> <img src={controlledText5}/> </div>
 
 				
 </div>

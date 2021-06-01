@@ -34,6 +34,16 @@
 	font-size: 1.3em;
 }
 
+.error-btn {
+	font-size: 1.2em;
+	border-radius: 0.5em;
+	padding: 0.5em 1.4em;
+	background-color: #FDBCB4;
+	transition: all 0.4s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 5em;
+	margin-top: -3px;
+}
 
 
 

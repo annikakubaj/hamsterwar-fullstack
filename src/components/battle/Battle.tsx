@@ -42,11 +42,11 @@ const randomHamsterLeft = () => {
 		<div className="randomhamsterleft" key={randomHamster.id} onClick={randomHamsterLeft}>
 		{(randomHamster.imgName.startsWith('http')) ? <img src={randomHamster.imgName}alt="hamster" />: <img src={`img/${randomHamster.imgName}`}alt="hamster" />}
 		<h2>{randomHamster.name}</h2>
-		<p>{randomHamster.age}</p>
-		<p>{randomHamster.favFood}</p>
-		<p>{randomHamster.loves}</p>
+		<p>{randomHamster.age} år</p>
+		<p>Favoritmat: {randomHamster.favFood}</p>
+		<p>Gillar att: {randomHamster.loves}</p>
 		
-		{isVisibleRandomHamster ? <div><p>Wins: {randomHamster.wins}</p> <p>Defeats: {randomHamster.defeats}</p></div>: 'Rösta för att ta del av resultat'}
+		{isVisibleRandomHamster ? <div><h3>Vinster: {randomHamster.wins}</h3> <h3>Förluster: {randomHamster.defeats}</h3></div>: 'Rösta för att ta del av resultat'}
 		</div> : 'Hämtar random hamster från API'}
 		
 		
@@ -54,10 +54,10 @@ const randomHamsterLeft = () => {
 		<div className="randomhamsterright" key={randomHamster2.id} onClick={randomHamsterRight}>
 		{(randomHamster2.imgName.startsWith('http')) ? <img src={randomHamster2.imgName}alt="hamster" />: <img src={`img/${randomHamster2.imgName}`}alt="hamster" />}
 		<h2>{randomHamster2.name}</h2>
-		<p>{randomHamster2.age}</p>
-		<p>{randomHamster2.favFood}</p>
-		<p>{randomHamster2.loves}</p>
-		{isVisibleRandomHamster ? <div><p>Wins: {randomHamster2.wins}</p> <p>Defeats: {randomHamster2.defeats}</p></div>: 'Rösta för att ta del av resultat'}
+		<p>{randomHamster2.age} år</p>
+		<p>Favoritmat: {randomHamster2.favFood}</p>
+		<p>Gillar att: {randomHamster2.loves}</p>
+		{isVisibleRandomHamster ? <div><h3>Vinster: {randomHamster2.wins}</h3> <h3>Förluster: {randomHamster2.defeats}</h3></div>: 'Rösta för att ta del av resultat'}
 		
 		
 		</div> : 'Hämtar random hamster från API'}

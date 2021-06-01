@@ -14,14 +14,14 @@ const HamsterInfo = ({ hamster }:Props) => {
 
 	if( isVisible ) {
 		maybeHamsterInfo = (
-		 <div>
-		<p>{ hamster.name }</p>
-		<p>{hamster.age}</p>
-		<p>{hamster.loves}</p>
-		<p>{hamster.favFood}</p>
-		<p>{hamster.games}</p>
-		<p>{hamster.wins}</p>
-		<p>{hamster.defeats}</p>
+		 <div className="hamster-info">
+		<p>Namn: { hamster.name }</p>
+		<p>Ålder: {hamster.age}</p>
+		<p>Gillar att: {hamster.loves}</p>
+		<p>Favoritmat: {hamster.favFood}</p>
+		<p>Antal matcher: {hamster.games}</p>
+		<p>Antal vinster: {hamster.wins}</p>
+		<p>Antal förluster: {hamster.defeats}</p>
 		</div>
 		)
 
@@ -34,7 +34,7 @@ const HamsterInfo = ({ hamster }:Props) => {
 	return (
 		
 	<div className="hamster-card">
-		<button onClick={toggleVisibility}>
+		<button className="show-btn" onClick={toggleVisibility}>
 			{isVisible ? 'Stäng hamster' : 'Visa hamster' } </button>
 		{maybeHamsterInfo}
 
