@@ -5,19 +5,24 @@
 
 
 .form { 
-	display: grid;
+	/* display: grid;
 	padding: 3em; 
 	border: 2px solid red;
 	font-size: 1.2em;
 	text-align: left;
-	grid-template-columns: 1fr 1fr 1fr;
-	text-align: center;
-
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	text-align: center; */
+display: flex;
+justify-content: center;
 	
 
 }
 .form-card {
 	border: green solid 2px;
+	width: 30em;
+	height: 40em;
+	margin-top: 10em;
 
 }
 
@@ -37,15 +42,16 @@
 }
 
 
-.form label {
+/* .form label {
 	font-weight: bold;
 	font-size: 0.9em;
-}
+	height: ;
+} */
 
 section {
 	border: 2px solid purple;
 	margin-bottom: 0.2em;
-	height: 3em;
+	height: 4em;
 	
 } 
 
@@ -54,10 +60,12 @@ section {
 	border-radius: 0.3em ;
 	padding-left: 0.5;
 	border-width: 3px;
+	height: 1.5em;
+	
 }
 
 .form .message-hidden {
-	position: absolute;
+	position: center;
 	color: var(--error-color);
 }
 
@@ -70,21 +78,25 @@ section {
 }
 
 .form button {
+	
 	font-size: 1.2em;
 	border-radius: 0.5em;
 	padding: 0.5em 1.4em;
-	background-color: #aa98a9;
-	transition: all 1s;
+	background-color: #FDBCB4;
+	transition: all 0.4s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 5em;
 }
 
 .form button:hover {
 	cursor: pointer;
-	background-color: #ff43a4;
+	background-color: #FFFF66;
 	transform: translateY(-4px);
+	font-size: 1.3em;
 
 }
 
 .form button:disabled {
-	background-color: #e5ccc9;
-	color: #ffb7c5;
+	background-color: #e5e4e2;
+	color: #808080;
 }

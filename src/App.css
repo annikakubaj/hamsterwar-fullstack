@@ -45,6 +45,7 @@ nav a:hover {
 }
 
 main {
-  background-color: #fcffa4;
+  /* background-color: #ffe4e1; */
+  background-color: #ffffe0;
   flex: 1 1 auto;
 }

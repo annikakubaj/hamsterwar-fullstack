@@ -5,7 +5,7 @@ import Battle from './components/battle/Battle'
 import Statistics from './components/statistics/Statistics'
 import History from './components/history/History'
 import Start from './components/start/Start'
-import Hamsterwarslogoo from './Hamsterwarslogoo.svg'
+// import Hamsterwarslogoo from './Hamsterwarslogoo.svg'
 import './App.css';
 
 
@@ -27,7 +27,7 @@ function App() {
       </header>
       <main>
 
-        <img src= { Hamsterwarslogoo } className="logo" alt="Hamsterwars logo" /> 
+       
         
         <Switch>
           <Route path="/galleri"> <Gallery /> </Route>

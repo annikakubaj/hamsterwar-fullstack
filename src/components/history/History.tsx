@@ -118,7 +118,7 @@ const History = () => {
 	return (
 	<div className="form">
 		<div className="form-card">
-		<h1> Lägg till ny hamster exempel </h1>
+		<h1> Ladda upp en hamster </h1>
 		<section> 
 			 
 				<label>  
@@ -136,7 +136,7 @@ const History = () => {
 				className={nameClass}
 				/>
 				</label>
-				{nameTouched ? <div className= "message hidden"> {nameErrorMessage} </div> : null}
+				{nameTouched ? <div className= "message-hidden"> {nameErrorMessage} </div> : null}
 				
 				
 		</section>
@@ -224,7 +224,7 @@ const History = () => {
 
 
 			<div className="form-card">
-			<h2>Here's your little champion! </h2>
+			<h1>Here's your little champion! </h1>
 			<p>Vad heter din hamster? {controlledText}</p>
 			<p>Hur gammal är den? {controlledText2}</p>
 			<p>Vad tycker den om att göra? {controlledText3}</p>
