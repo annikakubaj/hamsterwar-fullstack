@@ -7,17 +7,25 @@ import { Hamster } from '../../types/Hamster'
 
 
 const GalleryCard = () => {
-	const [hamsters, setHamsters] = useState<null | Hamster []>(null)
-	useEffect(() => {
-		async function getHamsters() {
-		const response = await fetch('/hamsters', { method: 'GET'})
-		const data: Hamster [] = await response.json()
-		console.log('hämtade från server' , data)
-		setHamsters(data)
-		// OBS! Bättre att hämta datan i App-komponenten, eftersom den alltid är Mounted
-		}
-		getHamsters()
-	}, [])
+	const [hamsters, setHamsters] = useState<null | Hamster[]>(null)
+    
+    useEffect(() => {
+getHamsters()   
+    }, [])
+    async function getHamsters() {
+        const response = await fetch('/hamsters', {method: 'GET'})
+        const data: Hamster[] = await response.json()
+        setHamsters(data)
+        
+    
+    }
+    async function removeHamster(id:string) {
+        await fetch("/hamsters/" + id, { method: 'DELETE' })
+		window.location.reload()
+        // setHamsters (await getHamsters())
+    }
+	
+	
 	return (
 
 	<div className= "hamster-container">
@@ -28,13 +36,10 @@ const GalleryCard = () => {
 				{(h.imgName.startsWith('http')) ? <img src={h.imgName}alt="hamster" />: <img src={`img/${h.imgName}`}alt="hamster" />}
 			 <br/>
 			{h.name} <br/>
+			<button onClick={() => removeHamster(h.id)}>Radera</button> 
 			<HamsterInfo hamster = {h} />
 			
-			
-
-			
-		
-		</div> 
+			</div> 
 		
 		))
 	: 'Hämtar produkter från API...'}
@@ -43,22 +48,5 @@ const GalleryCard = () => {
 	)}
 
 
-
-
-
-// const GalleryCard = () => {
-// 	return (
-
-// 	<div className="hamster-container">	
-// 	<div className="hamster-card">
-// 		<p>Hamsterbild</p>
-// 		<h1> Namn</h1>
-// 		<button>Mer info </button>
-
-// 		</div>
-// 	</div>
-	
-// )
-// 	}
 
 export default GalleryCard
