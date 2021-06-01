@@ -1,12 +1,17 @@
 .hamster-card {
-	border: 3px solid purple;
+	border:#ffffe0 5px solid;
 	/* padding: 1em; */
 	margin: 0.3em;
 	/* margin-bottom: -60px; */
+	background-color: #fffdd0;
+	border-radius: 0.5em;
+	
+	
+	
 }
 
 .border {
-	border: 1px solid black;
+	/* border: 1px solid black; */
 	padding: 1em;
 	margin: 1em;
 }
@@ -14,7 +19,7 @@
 .hamster-container {
 	display: grid;
 	grid-template-columns:  repeat(4, 1fr);  /* 1fr 1fr 1fr 1fr */
-	border: red solid 2px;
+	/* border: red solid 2px; */
 }
 
 
@@ -24,11 +29,14 @@
 	border-radius: 0.5em; 
 }
 
-.hamster-info{
+.hamster-info {
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: #4a4a4a;
 	font-size: 1.3em;
 	margin-top: -60px;
+	
+	
+	
 }
 
 
@@ -40,10 +48,18 @@
 	background-color: #ff5349;
 	transition: all 0.4s;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
-	margin: 5em;
+	font-size: x-small;
+	margin-left: 520px;
+	margin-top: 3px;
+	cursor: pointer;
 	
 	
+}
 
+.delete-btn:hover {
+	cursor: pointer;
+	background-color: #ff5349;
+	transform: translateY(-4px);
 
 }
 
@@ -56,5 +72,37 @@
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	margin: 5em;
 	margin-top: -3px;
+	cursor: pointer;
 
+}
+
+.show-btn:hover {
+	cursor: pointer;
+	background-color: #FDBCB4;
+	transform: translateY(-4px);
+}
+
+.form-btn {
+	font-size: 0.9em;
+	border-radius: 0.5em;
+	padding: 0.5em 1.4em;
+	background-color: #FDBCB4;
+	transition: all 0.4s;
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	margin: 5em;
+	margin-top: -3px;
+	cursor: pointer;
+}
+
+.form-btn:hover {
+	cursor: pointer;
+	background-color: #FFFF66;
+	transform: translateY(-3px);
+	font-size: 1.1em;
+}
+
+.rubrik {
+	font-size: 2.5em;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	color: #4a4a4a;
 }

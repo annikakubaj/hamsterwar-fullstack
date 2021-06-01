@@ -27,18 +27,21 @@ getHamsters()
 	
 	
 	return (
+		
 
 	<div className= "hamster-container">
 	
 		{hamsters 
 		? hamsters.map(h => (
 			<div className="hamster-card" key={ h.id  }>
+				<button className="delete-btn" onClick={() => removeHamster(h.id)}>X</button>
 				{(h.imgName.startsWith('http')) ? <img src={h.imgName}alt="hamster" />: <img src={`img/${h.imgName}`}alt="hamster" />}
+				
 			 <br/>
 			<h1>{h.name} </h1> <br/>
 			
 			<HamsterInfo hamster = {h} />
-			<button className="delete-btn" onClick={() => removeHamster(h.id)}>X</button> 
+			{/* <button className="delete-btn" onClick={() => removeHamster(h.id)}>X</button>  */}
 			</div> 
 		
 		))

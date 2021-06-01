@@ -9,7 +9,8 @@ import GalleryCard from './GalleryCard'
 const Gallery = () => {
 	return (
 		<div className="border">
-		<h1>Hamsters </h1>
+		<div className="rubrik"><h1>Galleriet</h1> </div>
+		<button className="form-btn"> Lägg till en hamster </button>
 		
 		
 	<GalleryCard />
