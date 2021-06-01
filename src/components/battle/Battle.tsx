@@ -37,6 +37,7 @@ const randomHamsterLeft = () => {
 
 	return (
 		<main className="battle">
+			
 		
 		{randomHamster ? 
 		<div className="randomhamsterleft" key={randomHamster.id} onClick={randomHamsterLeft}>
@@ -48,6 +49,9 @@ const randomHamsterLeft = () => {
 		
 		{isVisibleRandomHamster ? <div><h3>Vinster: {randomHamster.wins}</h3> <h3>Förluster: {randomHamster.defeats}</h3></div>: 'Rösta för att ta del av resultat'}
 		</div> : 'Hämtar random hamster från API'}
+
+		
+		<button className="random-btn" onClick={() => window.location.reload()}> Next </button>
 		
 		
 		{randomHamster2 ? 
@@ -62,12 +66,12 @@ const randomHamsterLeft = () => {
 		
 		</div> : 'Hämtar random hamster från API'}
 		
+						
 		{/* randomHamster.id === randomHamster2.id 
 		randomHamster.id != randomHamster2.id  */}
-		
-		
-					
+				
 			</main>
+			
 			)
 		}
 

@@ -7,6 +7,7 @@ import History from './components/history/History'
 import Start from './components/start/Start'
 // import Hamsterwarslogoo from './Hamsterwarslogoo.svg'
 import './App.css';
+import Form from './components/gallery/Form';
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
        
         
         <Switch>
+          <Route path="/form"> <Form /> </Route>
           <Route path="/galleri"> <Gallery /> </Route>
           <Route path="/battle"> <Battle /> </Route>
           <Route path="/battel">
@@ -38,6 +40,7 @@ function App() {
           <Route path="/statistik"> <Statistics /> </Route>
           <Route path="/historik"> <History /> </Route>
           <Route path="/"> <Start /> </Route>
+          
 
         </Switch>
         
