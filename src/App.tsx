@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route, Redirect } from 'react-router-dom'
+import Nav from './components/nav/Nav';
 import Gallery from './components/gallery/Gallery'
 import Battle from './components/battle/Battle'
 import Statistics from './components/statistics/Statistics'
@@ -16,14 +17,7 @@ function App() {
     <Router>
     <div className="App">
       <header className="App-header">
-        <nav>
-          <Link to="/"> Start </Link>
-          <Link to="/galleri"> Galleri </Link>
-          <Link to="/battle"> Battle </Link>
-          <Link to="/statistik"> Statistik </Link>
-          <Link to="/historik"> Historik </Link>
-         
-        </nav>
+      <Nav />
       
       </header>
       <main>

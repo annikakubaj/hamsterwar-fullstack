@@ -1,0 +1,17 @@
+nav a {
+	padding: 0.2em 1.5em;
+	transition: background-color 0.3s linear;
+	text-decoration: none;
+  
+  }
+  
+  nav a:hover {
+	background-color: lightgreen;
+  }
+
+  header {
+	background-color:#FDBCB4;
+	color: #61dafb;
+	padding:  0.5em;
+	flex: 0 0 auto;
+  }

@@ -32,12 +32,18 @@ const Form = () => {
     nameClass = nameIsValid ? "valid" : "error";
   }
 
+
+  const allowedAgeChar = "0123456789"
   let ageIsValid: boolean = true;
   let ageErrorMessage: string = "";
   if (age === "") {
     ageIsValid = false;
     ageErrorMessage = "Vänligen ange din hamsters ålder";
-  }
+  } else if (!age.split('').every(char => allowedAgeChar.includes(char))) { 
+		ageIsValid = false
+		ageErrorMessage ='Vänligen skriv din hamsters ålder med siffror' 
+	}
+
 
   let ageClass = "";
   if (ageTouched) {
@@ -130,6 +136,8 @@ const Form = () => {
             <div className="message-hidden"> {nameErrorMessage} </div>
           ) : null}
         </section>
+
+
         <section>
           <label>
             <input
@@ -212,8 +220,7 @@ const Form = () => {
 
         <div>
           <button disabled={formIsInvalid} onClick={postHamster}>
-            {" "}
-            Spara hamster!{" "}
+           Spara hamster!
           </button>
         </div>
       </div>
