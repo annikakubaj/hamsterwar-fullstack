@@ -21,8 +21,7 @@ getHamsters()
     }
     async function removeHamster(id:string) {
         await fetch("/hamsters/" + id, { method: 'DELETE' })
-		window.location.reload()
-        // setHamsters (await getHamsters())
+       getHamsters()
     }
 	
 	
