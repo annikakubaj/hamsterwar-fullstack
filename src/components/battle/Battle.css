@@ -3,6 +3,9 @@
 	justify-content: center;
 	/* border: 2px red solid; */
 	padding: 5em;
+	flex-direction: row;
+	
+	
 	
 }
 
@@ -51,6 +54,15 @@
 	transition: all 0.4s;
 	font-family:Verdana, Geneva, Tahoma, sans-serif;
 	align-self:flex-end;
+	cursor: pointer;
+
+}
+
+p {
+	height: 1em;
+	display: flex;
+	flex-direction: column;
+
 }
 
 

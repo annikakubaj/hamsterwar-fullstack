@@ -104,3 +104,8 @@ section {
 	background-color: #e5e4e2;
 	color: #808080;
 }
+
+.img-hamster-form {
+	max-width: 30em;
+	border-radius: 1em;
+}

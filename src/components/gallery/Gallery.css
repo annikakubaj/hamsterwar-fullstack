@@ -1,5 +1,4 @@
 .hamster-card {
-	border:#ffffe0 5px solid;
 	/* padding: 1em; */
 	margin: 0.3em;
 	/* margin-bottom: -60px; */
@@ -20,6 +19,7 @@
 	display: grid;
 	grid-template-columns:  repeat(4, 1fr);  /* 1fr 1fr 1fr 1fr */
 	/* border: red solid 2px; */
+	
 }
 
 
@@ -105,4 +105,9 @@
 	font-size: 2.5em;
 	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 	color: #4a4a4a;
+}
+
+h2 {
+	color: #4a4a4a;
+
 }

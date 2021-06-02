@@ -11,6 +11,7 @@ const Gallery = () => {
 	return (
 		<div className="border">
 		<div className="rubrik"><h1>Galleriet</h1> </div>
+		<h2>Vill du tävla med din hamster? </h2>
 
 		<Link to="/Form">
 		 <button className="form-btn"> Lägg till en hamster </button> 

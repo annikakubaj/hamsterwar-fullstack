@@ -231,10 +231,9 @@ const Form = () => {
         <p>Hur gammal är den? {controlledText2}</p>
         <p>Vad tycker den om att göra? {controlledText3}</p>
         <p>Vad är hens favoritmat? {controlledText4}</p>
-        {/* <p>Bild:<img src={controlledText5}/> </p> */}
         <div>
           {" "}
-          <img src={controlledText5} />{" "}
+          <img className="img-hamster-form" src={controlledText5} alt="" />{" "}
         </div>
       </div>
     </div>

@@ -36,11 +36,11 @@ async function putWinnerHamster(winner: Hamster ) {
 
 	}
 
-	const respone = await fetch("/hamsters/" + winner.id, {
+	const response = await fetch("/hamsters/" + winner.id, {
 		method: 'PUT',
-		headers: {'Content-Type': 'application/json' }, 
+		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(winnerUpdate)
-	})
+	})	
 }
 
 //Förlorande hamster
@@ -52,7 +52,7 @@ async function putLoserHamster(loser:Hamster) {
 
 	}
 
-	const respone = await fetch("/hamsters/" + loser.id, {
+	const response = await fetch("/hamsters/" + loser.id, {
 		method: 'PUT',
 		headers: {'Content-Type': 'application/json' }, 
 		body: JSON.stringify(loserUpdate)
@@ -93,7 +93,6 @@ const randomHamsterLeft = () => {
 
 	return (
 		<main className="battle">
-			
 		
 		{randomHamster ? 
 		<div className="randomhamsterleft" key={randomHamster.id} onClick={randomHamsterLeft}>
@@ -107,7 +106,7 @@ const randomHamsterLeft = () => {
 		</div> : 'Hämtar random hamster från API'}
 
 		
-		<button className="random-btn" onClick={() => window.location.reload()}> Next </button> 
+		<button className="random-btn" onClick={() => window.location.reload()}> Hoppa över </button>
 		
 		
 		{randomHamster2 ? 

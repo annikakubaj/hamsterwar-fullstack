@@ -28,9 +28,9 @@ getHamsters()
 
 		<div> { hamsters 
 		? <div className="start-container"> <h1>Välkommen till HamsterWars! </h1> 
-		<h3>Detta är appen där du kan rösta på den hamster du tycker är sötast genom att klicka på den.</h3>
-		<Link to="/Battle"><button className="battle-btn">Let's battle!</button> </Link>
-		<Link to="/Galleri"><button className="gallery-btn">Kolla in galleriet!</button> </Link>
+		<h3>Detta är appen där du kan rösta på den hamster du tycker är sötast genom att klicka på den i battle.</h3>
+		
+		<Link to="/Battle"><button className="battle-btn">Let's battle!</button> </Link> 
 		 </div>
 
 	:<div> <h1> Kunde inte hämta hamstrar från databasen. </h1> 
