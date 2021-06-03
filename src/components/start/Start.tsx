@@ -34,7 +34,7 @@ getHamsters()
 		 </div>
 
 	:<div> <h1> Kunde inte hämta hamstrar från databasen. </h1> 
-<button className="error-btn" onClick={() => window.location.reload()}> Försök igen </button> </div> } </div>
+<button className="error-btn" onClick={() => {getHamsters()}}> Försök igen </button> </div> } </div>
 
 	
 

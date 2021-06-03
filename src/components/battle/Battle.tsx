@@ -36,7 +36,7 @@ async function putWinnerHamster(winner: Hamster ) {
 
 	}
 
-	const response = await fetch("/hamsters/" + winner.id, {
+	await fetch("/hamsters/" + winner.id, {
 		method: 'PUT',
 		headers: { 'Content-Type': 'application/json' },
 		body: JSON.stringify(winnerUpdate)
@@ -52,7 +52,7 @@ async function putLoserHamster(loser:Hamster) {
 
 	}
 
-	const response = await fetch("/hamsters/" + loser.id, {
+	await fetch("/hamsters/" + loser.id, {
 		method: 'PUT',
 		headers: {'Content-Type': 'application/json' }, 
 		body: JSON.stringify(loserUpdate)
