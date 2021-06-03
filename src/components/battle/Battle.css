@@ -62,7 +62,20 @@ p {
 	height: 1em;
 	display: flex;
 	flex-direction: column;
+	
 
+}
+
+.result h3{
+color: red;
+font-size: 2em;
+border: dotted red;
+}
+
+.result h2 {
+	color: green;
+	font-size: 2em;
+	border: dotted green;
 }
 
 
